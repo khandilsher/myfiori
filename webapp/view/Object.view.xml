@@ -1,0 +1,33 @@
+<mvc:View controllerName="myfiori.myFiori.controller.Object" xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:form="sap.ui.layout.form" xmlns:semantic="sap.f.semantic">
+	<semantic:SemanticPage 
+	id="page" 
+	headerPinnable="false" 
+	toggleHeaderOnTitleClick="false" 
+	busy="{objectView>/busy}"
+	busyIndicatorDelay="{objectView>/delay}">
+		<semantic:titleHeading>
+			<Title text="Product"/>
+		</semantic:titleHeading>
+			<semantic:headerContent>
+				<ObjectHeader 
+					title="{ProductID}" 
+					responsive="true"
+					number="{ 
+					path: 'Price', 
+					formatter: '.formatter.numberUnit' }" 
+					numberUnit="{CurrencyCode}"
+					titleActive="true" 
+					titlePress="onShowDetailPopover">
+						<attributes>
+							<ObjectAttribute text="{Name}"/>
+						</attributes>
+				</ObjectHeader>
+				<mvc:XMLView viewName="myfiori.myFiori.view.ProductDetails"/>
+				<core:Fragment fragmentName="myfiori.myFiori.view.SupplierInfo" type="XML"/>
+			</semantic:headerContent>
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
+		</semantic:sendEmailAction>
+	</semantic:SemanticPage>
+</mvc:View>
