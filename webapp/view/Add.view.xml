@@ -1,0 +1,10 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:semantic="sap.m.semantic" controllerName="myfiori.myFiori.controller.Add"
+	xmlns:html="http://www.w3.org/1999/xhtml" >
+	<semantic:FullscreenPage
+		id="page"
+		title="{i18n>addPageTitle}"
+		showNavButton="true"
+		navButtonPress="onNavBack">
+	</semantic:FullscreenPage>
+
+</mvc:View>
