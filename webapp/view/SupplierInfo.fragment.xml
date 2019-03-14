@@ -6,7 +6,7 @@
 		class="sapUiResponsiveMargin"
 		width="auto"
 		headerText="{i18n>supplierTitle}"
-		expandable="true"
+		expandable="{device>/system/phone}"
 		expanded="false">
 		<content>
 			<List id="supplierList">

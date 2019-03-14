@@ -113,11 +113,6 @@ sap.ui.define([
 			this._showObject(oEvent.getSource());
 		},
 
-		/**
-		 * Event handler for navigating back.
-		 * We navigate back in the browser historz
-		 * @public
-		 */
 		onNavBack: function () {
 			history.go(-1);
 		},
@@ -146,6 +141,10 @@ sap.ui.define([
 		 * and group settings and refreshes the list binding.
 		 * @public
 		 */
+		 onAdd: function() {
+				this.getRouter().navTo("add");
+			},
+
 		onRefresh: function () {
 			var oTable = this.byId("table");
 			oTable.getBinding("items").refresh();
